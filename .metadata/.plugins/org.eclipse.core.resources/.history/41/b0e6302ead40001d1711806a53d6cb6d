@@ -1,0 +1,20 @@
+package com.aurionpro.springmvc;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/test")
+public class TestController {
+
+	@RequestMapping("/show")
+	public String showPage() {
+		return "test-page";
+	}
+
+	@RequestMapping("/processForm")
+	public String processForm() {
+		return "form-details";
+
+	}
+}

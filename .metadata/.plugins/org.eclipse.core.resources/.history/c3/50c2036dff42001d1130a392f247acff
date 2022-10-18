@@ -1,0 +1,109 @@
+package com.aurionpro.springmvc.model;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedHashMap;
+
+public class Student {
+	private String firstName;
+	private String lastName;
+	private String year;
+	private LinkedHashMap<String, String> yearOption;
+	private String[] selectedSubjects;
+	private ArrayList<String> subjects;
+	private String[] genders = { "male", "female" };
+	private String selectedGender;
+
+	public Student() {
+		yearOption();
+		addNewsubjects();
+	}
+
+	public String[] getGenders() {
+		return genders;
+	}
+
+	public void setGenders(String[] genders) {
+		this.genders = genders;
+	}
+
+	public String getSelectedGender() {
+		return selectedGender;
+	}
+
+	public void setSelectedGender(String selectedGender) {
+		this.selectedGender = selectedGender;
+	}
+
+	public String[] getSelectedSubjects() {
+		return selectedSubjects;
+	}
+
+	public void setSelectedSubjects(String[] selectedSubjects) {
+		this.selectedSubjects = selectedSubjects;
+	}
+
+	public ArrayList<String> getSubjects() {
+		return subjects;
+	}
+
+	public void setSubjects(ArrayList<String> subjects) {
+		this.subjects = subjects;
+	}
+
+	public LinkedHashMap<String, String> getYearOption() {
+		return yearOption;
+	}
+
+	public void setYearOption(LinkedHashMap<String, String> yearOption) {
+		this.yearOption = yearOption;
+	}
+
+	public String getYear() {
+		return year;
+	}
+
+	public void setYear(String year) {
+		this.year = year;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	private void addNewsubjects() {
+		subjects = new ArrayList<String>();
+		subjects.add("java");
+		subjects.add("DBMS");
+		subjects.add("DWM");
+		subjects.add("C++");
+
+	}
+
+	private void yearOption() {
+		yearOption = new LinkedHashMap<String, String>();
+		yearOption.put("2020", "2020");
+		yearOption.put("2021", "2021");
+		yearOption.put("2022", "2022");
+
+	}
+
+	@Override
+	public String toString() {
+		return "Student [firstName=" + firstName + ", lastName=" + lastName + ", year=" + year + ", selectedSubjects="
+				+ Arrays.toString(selectedSubjects) + ", subjects=" + subjects + ", yearOption=" + yearOption + "]";
+	}
+
+}

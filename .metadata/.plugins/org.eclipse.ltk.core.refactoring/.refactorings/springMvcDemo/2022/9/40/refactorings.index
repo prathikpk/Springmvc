@@ -1,0 +1,14 @@
+1664529893442	Move 'home-page.jsp' to 'WEB-INF'
+1664529905281	Move 'home-page.jsp' to 'view'
+1664529912901	Move 'index.jsp' to 'WebContent'
+1664530724467	Move 'index.jsp' to 'view'
+1664531335537	Copy compilation unit
+1664531362943	Rename type 'hController'
+1664531642647	Copy file
+1664532363026	Copy compilation unit
+1664533173764	Rename type 'homeController'
+1664534560419	Delete element
+1664536479348	Delete element
+1664536635567	Copy file
+1664539360246	Move file
+1664539376801	Move 'home-page.jsp' to 'view'

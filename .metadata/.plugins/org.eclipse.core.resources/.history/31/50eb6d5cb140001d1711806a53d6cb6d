@@ -1,0 +1,22 @@
+package com.aurionpro.springmvc;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/student")
+public class StudentController {
+
+	@RequestMapping("/showStudentForm")
+	public String showStudentForm() {
+		return null;
+
+	}
+
+	@RequestMapping("/processStudentForm")
+	public String processForm() {
+		return null;
+
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.aurionpro.springmvc;
+
+public class homeController {
+
+}

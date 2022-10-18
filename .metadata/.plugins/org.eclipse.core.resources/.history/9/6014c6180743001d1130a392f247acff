@@ -1,0 +1,151 @@
+package com.aurionpro.springmvc.model;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedHashMap;
+
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
+import org.springframework.lang.NonNull;
+
+public class Student {
+	private String firstName;
+//	@NotNull(message="please enter last name")
+	@Size(min = 1, message = "please enter last name")
+	private String lastName;
+	private Integer atkt;
+	private String email;
+	@Pattern(regexp = "^[1-9][0-9]{5}$", message = "please enter valid zip code")
+	private String zipCode;
+	private String year;
+	private LinkedHashMap<String, String> yearOption;
+	private String[] selectedSubjects;
+	private ArrayList<String> subjects;
+	private String[] genders = { "male", "female" };
+	private String selectedGender;
+	
+	public Student() {
+		yearOption();
+		addNewsubjects();
+	}
+//Getter
+	public String getFirstName() {
+		return firstName;
+	}
+	
+	public String getLastName() {
+		return lastName;
+	}
+	
+	public Integer getAtkt() {
+		return atkt;
+	}
+	
+	public String getEmail() {
+		return email;
+	}
+	
+	public String getZipCode() {
+		return zipCode;
+	}
+
+	public String[] getGenders() {
+		return genders;
+	}
+	
+//Setter
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	
+	public void setAtkt(Integer atkt) {
+		this.atkt = atkt;
+	}
+	
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
+	public void setZipCode(String zipCode) {
+		this.zipCode = zipCode;
+	}
+
+
+	public void setGenders(String[] genders) {
+		this.genders = genders;
+	}
+
+	public String getSelectedGender() {
+		return selectedGender;
+	}
+
+	public void setSelectedGender(String selectedGender) {
+		this.selectedGender = selectedGender;
+	}
+
+	public String[] getSelectedSubjects() {
+		return selectedSubjects;
+	}
+
+	public void setSelectedSubjects(String[] selectedSubjects) {
+		this.selectedSubjects = selectedSubjects;
+	}
+
+	public ArrayList<String> getSubjects() {
+		return subjects;
+	}
+
+	public void setSubjects(ArrayList<String> subjects) {
+		this.subjects = subjects;
+	}
+
+	public LinkedHashMap<String, String> getYearOption() {
+		return yearOption;
+	}
+
+	public void setYearOption(LinkedHashMap<String, String> yearOption) {
+		this.yearOption = yearOption;
+	}
+
+	public String getYear() {
+		return year;
+	}
+
+	public void setYear(String year) {
+		this.year = year;
+	}
+
+
+	private void addNewsubjects() {
+		subjects = new ArrayList<String>();
+		subjects.add("java");
+		subjects.add("DBMS");
+		subjects.add("DWM");
+		subjects.add("C++");
+
+	}
+
+	private void yearOption() {
+		yearOption = new LinkedHashMap<String, String>();
+		yearOption.put("2020", "2020");
+		yearOption.put("2021", "2021");
+		yearOption.put("2022", "2022");
+
+	}
+
+	@Override
+	public String toString() {
+		return "Student [firstName=" + firstName + ", lastName=" + lastName + ", year=" + year + ", selectedSubjects="
+				+ Arrays.toString(selectedSubjects) + ", subjects=" + subjects + ", yearOption=" + yearOption + "]";
+	}
+
+}

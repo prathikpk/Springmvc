@@ -1,0 +1,3 @@
+typeMismatch.theStudent.atkt:invalid input,Enter only numbers
+typeMismatch.java.lang.Integer:invalid input,Enter only number
+java.lang.String:invalid input,Enter only number not string

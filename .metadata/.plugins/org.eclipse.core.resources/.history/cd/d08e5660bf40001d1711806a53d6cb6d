@@ -1,0 +1,91 @@
+package com.aurionpro.springmvc.model;
+
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+
+public class Student {
+
+	public String firstName;
+	public String lastName;
+	private String year;
+	private String[] selectedsubjects;
+	
+
+	public String[] getSelectedsubject() {
+		return selectedsubjects;
+	}
+
+	public void setSelectedsubject(String[] selectedsubjects) {
+		this.selectedsubjects = selectedsubjects;
+	}
+
+	public ArrayList<String> getSubjects() {
+		return subjects;
+	}
+
+	public void setSubjects(ArrayList<String> subjects) {
+		this.subjects = subjects;
+	}
+
+	private ArrayList<String> subjects;
+
+	private LinkedHashMap<String, String> yearOption;
+
+	public Student() {
+		yearOption = YearOption();
+		addNewsubjects();
+	}
+
+	private void addNewsubjects() {
+		subjects=new ArrayList<String>();
+		subjects.add("java");
+		subjects.add("DBMS");
+		subjects.add("Python");
+	}
+
+	public void setYearOption(LinkedHashMap<String, String> yearOption) {
+		this.yearOption = yearOption;
+	}
+
+	private LinkedHashMap<String, String> YearOption() {
+		yearOption = new LinkedHashMap<String, String>();
+		yearOption.put("1", "2020");
+		yearOption.put("2", "2021");
+		yearOption.put("3", "2022");
+		return yearOption;
+	}
+
+	public LinkedHashMap<String, String> getYearOption() {
+		return yearOption;
+	}
+
+	public String getYear() {
+		return year;
+	}
+
+	public void setYear(String year) {
+		this.year = year;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	@Override
+	public String toString() {
+		return "Student [firstName=" + firstName + ", lastName=" + lastName + "]";
+	}
+
+}
